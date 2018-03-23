@@ -8,9 +8,5 @@ class collectd::repo::redhat {
       baseurl => "https://pkg.ci.collectd.org/rpm/collectd-${::collectd::ci_package_repo}/epel-${::operatingsystemmajrelease}-${::architecture}",
       gpgkey  => 'https://pkg.ci.collectd.org/pubkey.asc',
     }
-
-  } else {
-    require ::epel
   }
-
 }
